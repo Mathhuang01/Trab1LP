@@ -16,7 +16,7 @@ void push(struct Node** head_ref, int new_data) {
 void bubbleSort(struct Node* head) {
     int swapped;
     struct Node *ptr1;
-    struct Node *lptr = NULL; // Último nó já ordenado
+    struct Node *lptr = NULL;
 
     if (head == NULL) {
         return;
@@ -28,7 +28,6 @@ void bubbleSort(struct Node* head) {
 
         while (ptr1->next != lptr) {
             if (ptr1->data > ptr1->next->data) {
-                // Troca os elementos
                 int temp = ptr1->data;
                 ptr1->data = ptr1->next->data;
                 ptr1->next->data = temp;
@@ -52,11 +51,10 @@ void printList(struct Node* head) {
 int main() {
     struct Node* head = NULL;
     
-    push(&head, 5);
-    push(&head, 20);
     push(&head, 4);
+    push(&head, 1);
     push(&head, 3);
-    push(&head, 30);
+    push(&head, 2);
 
     printf("Lista antes da ordenação:\n");
     printList(head);
