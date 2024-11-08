@@ -14,7 +14,7 @@ void push(struct Node** head_ref, int new_data) {
 }
 
 void insertionSort(struct Node** head_ref) {
-    struct Node* sorted = NULL; // Lista ordenada
+    struct Node* sorted = NULL;
 
     struct Node* current = *head_ref;
     while (current != NULL) {
@@ -49,11 +49,10 @@ void printList(struct Node* head) {
 int main() {
     struct Node* head = NULL;
     
-    push(&head, 5);
-    push(&head, 20);
     push(&head, 4);
+    push(&head, 1);
     push(&head, 3);
-    push(&head, 30);
+    push(&head, 2);
 
     printf("Lista antes da ordenação:\n");
     printList(head);
