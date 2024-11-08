@@ -68,14 +68,11 @@ void printList(struct Node* head) {
 int main() {
     struct Node* head = NULL;
 
-    // Inserindo dados na lista
-    push(&head, 15);
-    push(&head, 10);
-    push(&head, 5);
-    push(&head, 20);
+    push(&head, 4);
+    push(&head, 1);
     push(&head, 3);
     push(&head, 2);
-
+   
     printf("Lista antes da ordenação:\n");
     printList(head);
 
