@@ -20,8 +20,8 @@ void swap(struct Node* a, struct Node* b) {
 }
 
 struct Node* partition(struct Node* low, struct Node* high) {
-    int pivot = high->data; // Pivô
-    struct Node* i = low->next;  // Ponteiro para o menor elemento
+    int pivot = high->data;
+    struct Node* i = low->next;
 
     struct Node* j = low;
     while (j != high) {
@@ -62,13 +62,10 @@ void printList(struct Node* head) {
 int main() {
     struct Node* head = NULL;
 
-    push(&head, 10);
-    push(&head, 80);
-    push(&head, 30);
-    push(&head, 90);
-    push(&head, 40);
-    push(&head, 50);
-    push(&head, 70);
+    push(&head, 4);
+    push(&head, 1);
+    push(&head, 3);
+    push(&head, 2);
 
     printf("Lista antes da ordenação:\n");
     printList(head);
